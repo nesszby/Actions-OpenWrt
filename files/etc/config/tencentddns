@@ -1,0 +1,13 @@
+
+config base 'base'
+	option time '10'
+	option siteid 'openwrt_41'
+	option enable '1'
+	option clean '1'
+	option key_id '251739'
+	option key_token 'fc738bcc6aa5e2645e266ac60ce58c8b'
+	option main_domain 'djangoray.ml'
+	option sub_domain '@'
+	option interface 'wan'
+	option record_id '897853463'
+
