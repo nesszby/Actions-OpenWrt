@@ -42,7 +42,7 @@ config host
 	option name 'PC'
 	option dns '1'
 	option ip '192.168.0.150'
-	option mac '8c:dc:d4:29:5a:af'
+	option mac '8C:DC:D4:29:5A:AF'
 
 config host
 	option name 'Synology'

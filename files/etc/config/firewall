@@ -54,15 +54,6 @@ config redirect
 	option dest_port '22'
 	option src_dport '8267'
 
-config redirect
-	option target 'DNAT'
-	option name 'Baidupcs'
-	option src 'wan'
-	option src_dport '6900'
-	option dest 'lan'
-	option dest_ip '192.168.0.254'
-	option dest_port '6900'
-
 config defaults
 	option syn_flood '1'
 	option input 'ACCEPT'
@@ -200,12 +191,6 @@ config rule
 config include
 	option path '/etc/firewall.user'
 
-config include 'miniupnpd'
-	option type 'script'
-	option path '/usr/share/miniupnpd/firewall.include'
-	option family 'any'
-	option reload '1'
-
 config include 'adbyby'
 	option type 'script'
 	option path '/var/etc/adbyby.include'
@@ -217,6 +202,27 @@ config rule 'adblock'
 	option src 'wan'
 	option proto 'tcp'
 	option dest_port '8118'
+
+config include 'wrtbwmon'
+	option type 'script'
+	option path '/etc/wrtbwmon.include'
+	option reload '1'
+
+config include 'bypass'
+	option type 'script'
+	option path '/var/etc/bypass.include'
+	option reload '1'
+
+config include 'miniupnpd'
+	option type 'script'
+	option path '/usr/share/miniupnpd/firewall.include'
+	option family 'any'
+	option reload '1'
+
+config include 'openclash'
+	option type 'script'
+	option path '/var/etc/openclash.include'
+	option reload '1'
 
 config include 'passwall'
 	option type 'script'
@@ -233,13 +239,10 @@ config include 'shadowsocksr'
 	option path '/var/etc/shadowsocksr.include'
 	option reload '1'
 
-config include 'wrtbwmon'
-	option type 'script'
-	option path '/etc/wrtbwmon.include'
-	option reload '1'
-
-config include 'bypass'
-	option type 'script'
-	option path '/var/etc/bypass.include'
-	option reload '1'
+config rule 'kms'
+	option name 'kms'
+	option target 'ACCEPT'
+	option src 'wan'
+	option proto 'tcp'
+	option dest_port '1688'
 
