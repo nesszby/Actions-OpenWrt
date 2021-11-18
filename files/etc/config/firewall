@@ -213,6 +213,16 @@ config include 'bypass'
 	option path '/var/etc/bypass.include'
 	option reload '1'
 
+config redirect
+	option target 'DNAT'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp udp'
+	option src_dport '5764'
+	option dest_ip '192.168.0.101'
+	option dest_port '5700'
+	option name 'QL'
+
 config include 'miniupnpd'
 	option type 'script'
 	option path '/usr/share/miniupnpd/firewall.include'
@@ -245,4 +255,14 @@ config rule 'kms'
 	option src 'wan'
 	option proto 'tcp'
 	option dest_port '1688'
+
+config redirect
+	option target 'DNAT'
+	option src 'wan'
+	option dest 'lan'
+	option proto 'tcp udp'
+	option src_dport '9266'
+	option dest_ip '192.168.0.230'
+	option dest_port '80'
+	option name 'JDBox'
 
