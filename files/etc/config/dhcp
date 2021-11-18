@@ -22,8 +22,6 @@ config dhcp 'lan'
 	option limit '150'
 	option leasetime '12h'
 	option dhcpv4 'server'
-	option dhcpv6 'server'
-	option ra 'server'
 	option ra_slaac '1'
 	list ra_flags 'managed-config'
 	list ra_flags 'other-config'
@@ -67,4 +65,17 @@ config host
 	option dns '1'
 	option mac 'B0:25:AA:47:35:95'
 	option ip '192.168.0.105'
+
+config srvhost
+	option srv '_vlmcs._tcp'
+	option target 'OpenWrt'
+	option port '1688'
+	option class '0'
+	option weight '100'
+
+config host
+	option name 'JDboxV3'
+	option dns '1'
+	option mac 'DC:D8:7C:28:7A:61'
+	option ip '192.168.0.230'
 
