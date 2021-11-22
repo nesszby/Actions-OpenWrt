@@ -76,6 +76,12 @@ config srvhost
 config host
 	option name 'JDboxV3'
 	option dns '1'
-	option mac 'DC:D8:7C:28:7A:61'
+	option mac 'DC:D8:7C:28:7A:60'
 	option ip '192.168.0.230'
+
+config host
+	option name 'Quest2'
+	option dns '1'
+	option mac '80:F3:EF:9F:3C:60'
+	option ip '192.168.0.160'
 
