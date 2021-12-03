@@ -19,7 +19,7 @@ sed -i 's/+luci-theme-bootstrap/+luci-theme-argon/g' feeds/luci/collections/luci
 # Modify other ipk
 rm -rf package/lean/luci-theme-argon
 git clone https://github.com/Django9264/luci-app-tencentddns package/luci-app-tencentddns
-git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+#git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 # git clone https://github.com/Django9264/luci-theme-argon package/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
