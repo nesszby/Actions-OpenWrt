@@ -45,8 +45,8 @@ config host
 config host
 	option name 'PC'
 	option dns '1'
-	option ip '192.168.0.150'
 	option mac '2A:06:A1:09:00:51'
+	option ip '192.168.0.151'
 
 config host
 	option name 'Synology'
