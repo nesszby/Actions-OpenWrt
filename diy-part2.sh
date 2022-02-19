@@ -17,7 +17,7 @@ sed -i 's/+luci-theme-bootstrap/+luci-theme-argon/g' feeds/luci/collections/luci
 # Modify default password
 #sed -i 's/root:.*/root:$1$c.HkM.0F$wmPKu7xbctli1iHA1Crrg.:18862:0:99999:7:::/g' package/base-files/files/etc/shadow
 # Modify other ipk
-rm -rf package/lean/luci-theme-argon
+rm -rf ../lean/luci-theme-argon
 git clone https://github.com/Django9264/luci-app-tencentddns package/luci-app-tencentddns
 # git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
