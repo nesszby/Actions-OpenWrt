@@ -26,3 +26,9 @@ config interface 'wan'
 	option ipv6 '0'
 	option keepalive '0'
 
+config interface 'ONU'
+	option proto 'static'
+	option ifname 'eth1'
+	option ipaddr '192.168.1.10'
+	option netmask '255.255.255.0'
+
